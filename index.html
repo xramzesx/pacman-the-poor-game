@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./gfx/ghost-favicon.ico" type="image/x-icon">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/export.css">
+    
+    <!-- settings etc. -->
+    <script src="js/main/defaults.js"></script>
+    
+    <!-- utilities -->
+    <script src="js/utilities/net.js"></script>
+    
+    <!-- pathfinding modules -->
+    <script src="js/pathfind/Node.js"></script>
+    <script src="js/pathfind/Matrix.js"></script>
+
+    <!-- board support -->
+    <script src="js/board/Field.js"></script>
+    <script src="js/board/CanvasField.js"></script>
+    
+    <!-- characters -->
+    <script src="js/characters/Character.js"></script>
+    <script src="js/characters/Player.js"></script>
+    <script src="js/characters/Ghost.js"></script>
+    
+    <!-- main -->
+    <script src="js/main/main.js"></script>
+    
+    <title>PACMANIK</title>
+</head>
+<body>
+    <h1>Pac gierka</h1>
+    <div id="autoturn-window">
+        <input type="checkbox" value="checked" id="autoturn" name="autoturn"> 
+        <label for="autoturn"> autozakręt </label>
+    </div>
+    <a class="return" href="pathfind.html">Przejdź do testowego pathfindingu</a> <br>
+
+
+    <!-- <a class="return" href="generator.html">Powrót do generatora</a> <br> -->
+    <div id="game">
+        <canvas id="border-map" height="960" width="960"></canvas>
+        <canvas id="action-map" height="1920" width="1920"></canvas>
+    </div>
+    <div id="game-over">
+        <div id="game-over__window">
+            <h1>Przegrałeś</h1>
+            <a class="return" href="index.html">jeszcze raz</a> <br>
+        </div>
+    </div>
+</body>
+</html>
